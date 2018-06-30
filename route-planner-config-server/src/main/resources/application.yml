@@ -1,0 +1,13 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ShanmugamRaman/route-planner #GitHub Project level url
+          searchPaths: ConfigData #Folder in Git to look for config files
+        # "native" is used when the native profile is active, for local tests with a classpath repo:
+        native:
+          searchLocations: classpath:offline-repository/
+server:
+  port: 8001
